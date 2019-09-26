@@ -64,6 +64,8 @@ systemctl daemon-reload
 systemctl enable todoapp
 systemctl start todoapp
 
+nginx -s reload
+
 }
 mySetup
 
