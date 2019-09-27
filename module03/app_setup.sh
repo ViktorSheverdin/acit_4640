@@ -8,7 +8,9 @@ yum install wget -y
 adduser admin
 echo P@ssw0rd | passwd admin --srdin
 usermod -aG wheel admin
-wget https://acit4640.y.vu/docs/module02/resources/acit_admin_id_rsa.pub -P ~admin/.ssh/authorized_keys
+#wget https://acit4640.y.vu/docs/module02/resources/acit_admin_id_rsa.pub -P ~admin/.ssh/authorized_keys
+
+
 
 sed -r -i 's/^(%wheel\s+ALL=\(ALL\)\s+)(ALL)$/\1NOPASSWD: ALL/' /etc/sudoers
 yum install epel-release vim git tcpdump curl net-tools bzip2 -y
@@ -47,6 +49,7 @@ echo $databasePath
 nginxPath=${fileFolderPath}/nginx.conf
 todoappPath=${fileFolderPath}/todoapp.service
 
+cp $fileFolderPath/acit_admin_id_rsa.pub ~admin/.ssh/authorized_keys 
 
 cp $databasePath /home/todo-app/app/config/ -f
 cat /home/todo-app/app/config/database.js
