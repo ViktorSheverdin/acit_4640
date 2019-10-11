@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-vboxmanager () { VBoxManage.exe "$@"; }
+vboxmanager () { /mnt/c/Program\ Files/Oracle/VirtualBox/VBoxManage.exe "$@"; }
 VM_NAME="VM_ACIT4640"
 NAT_NETWORK="net_4640"
 PXE_SERVER="PXE_4640"
