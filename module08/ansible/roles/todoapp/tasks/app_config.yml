@@ -1,0 +1,14 @@
+---
+- name: Git Clone
+  become: yes
+  become_user: todo-app
+  git:
+    repo: '{{ git_app_url }}'
+    dest: '{{ git_local_path }}'
+
+- name: Npm install
+  command: npm install
+  become: yes
+  become_user: root
+  args:
+    chdir: '{{ app_path }}'

@@ -1,0 +1,32 @@
+---
+ - name: Install Git
+   include_role:
+     name: git
+
+ - name: Install Node
+   include_role:
+     name: node
+
+ - name: Install Nginx
+   include_role:
+     name: nginx
+
+ - name: Install Mongodb
+   include_role:
+     name: mongodb
+
+ - name: Install Npm
+   include_role:
+     name: npm
+
+ - name: Setup Selinux
+   include_role:
+     name: selinux
+
+ - name: Start services
+   include_role:
+     name: start_services
+
+ - name: Setup Firewall
+   include_role:
+     name: firewall

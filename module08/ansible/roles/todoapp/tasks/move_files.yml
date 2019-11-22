@@ -1,0 +1,28 @@
+---
+  - name: Move Nginx config
+    template:
+      src: '{{ nginx_file_template }}'
+      dest: '{{ ngix_file_template_dest }}'      
+      owner: nginx
+      group: nginx
+
+  - name: Move Database config
+    template:
+      src: '{{ database_file_template }}'
+      dest: '{{ database_file_template_dest }}'
+      owner: todo-app
+      group: todo-app
+
+  - name: Move Todoapp config
+    template:
+      src: '{{ todoapp_file_template }}'
+      dest: '{{ todoapp_file_template_dest }}'      
+      owner: root
+      group: root
+
+  - name: Reload nginx configuration file
+    become: yes
+    service:
+      name: nginx
+      state: reloaded
+      enabled: yes

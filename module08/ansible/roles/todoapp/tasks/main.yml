@@ -1,0 +1,11 @@
+---
+- name: Create User
+  include_tasks: create_user.yml
+- name: Setup todoapp
+  include_tasks: app_config.yml
+- name: Move files
+  include_tasks: move_files.yml
+- name: Change permissions
+  include_tasks: change_permissions.yml
+- name: Restart Services
+  include_tasks: restart_services.yml

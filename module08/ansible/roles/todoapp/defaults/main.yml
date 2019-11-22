@@ -1,0 +1,20 @@
+---
+user_password: '$6$20d5IHYI4OGf$uYc8JZxgwlTVKq.hULo2gsSoh6iVFnkoxscIGjVi34UsJP0B/Q/eINZX.b/Zp.5HOqgb9GaEtVbNDiQx7gbGV/'
+git_local_path: '/home/todo-app/app/'
+git_app_url: 'https://github.com/timoguic/ACIT4640-todo-app.git'
+ngix_file_source: ../files/nginx.conf
+ngix_file_dest: /etc/nginx/nginx.conf
+todo_file_source: ../files/todoapp.service
+todo_file_dest: /lib/systemd/system
+database_file_source: ../files/database.js
+database_file_dest: /home/todo-app/app/config/database.js
+nginx_file_template: roles/todoapp/templates/nginx_conf.j2
+database_file_template: roles/todoapp/templates/database.j2
+todoapp_file_template: roles/todoapp/templates/todoapp_service.j2
+ngix_file_template_dest: '/etc/nginx/nginx.conf'
+database_file_template_dest: '/home/todo-app/app/config/database.js'
+todoapp_file_template_dest: '/lib/systemd/system/todoapp.service'
+todo_app_dir: /home/todo-app
+app_path: '/home/todo-app/app'
+local_db_url: 'mongodb://localhost/acit4640'
+port_num: 'http://localhost:8080'

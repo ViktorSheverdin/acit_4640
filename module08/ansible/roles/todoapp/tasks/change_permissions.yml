@@ -1,0 +1,16 @@
+---
+- name: Change todoapp permissions
+  file:
+    path: '{{ todo_app_dir }}'
+    state: directory
+    recurse: yes
+    mode: '0755'
+    owner: todo-app
+    group: todo-app
+
+- name: Change app permissions
+  file:
+    path: '{{ ngix_file_dest }}'
+    mode: '0744'
+    owner: nginx
+    group: nginx

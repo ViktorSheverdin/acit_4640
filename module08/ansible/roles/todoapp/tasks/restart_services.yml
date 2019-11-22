@@ -1,0 +1,17 @@
+---
+- name: Start and enabe - todoapp
+  service:
+    name: todoapp
+    enabled: yes
+    state: started
+
+- name: Reboot services
+  systemd:
+    daemon_reload: yes
+
+- name: Reload nginx configuration file
+  become: yes
+  service:
+    name: nginx
+    state: reloaded
+    enabled: yes

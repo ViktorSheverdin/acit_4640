@@ -1,0 +1,8 @@
+---
+- name: Setup firewall
+  firewalld:
+    zone: public
+    service: http
+    permanent: yes
+    state: enabled
+    immediate: yes

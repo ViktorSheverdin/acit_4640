@@ -1,0 +1,5 @@
+---
+- name: install Mongo
+  yum:
+    name: mongodb-server
+    state: installed

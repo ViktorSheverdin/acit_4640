@@ -1,0 +1,10 @@
+---
+- hosts: todoapp
+  become: yes
+  tasks:
+  - name: BASE 
+    include_role:
+      name: base
+  - name: TODOAPP
+    include_role:
+        name: todoapp

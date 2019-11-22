@@ -1,0 +1,6 @@
+---
+- name: Create new User for todoapp
+  user:
+    name: todo-app
+    password: $6$20d5IHYI4OGf$uYc8JZxgwlTVKq.hULo2gsSoh6iVFnkoxscIGjVi34UsJP0B/Q/eINZX.b/Zp.5HOqgb9GaEtVbNDiQx7gbGV/
+    state: present
